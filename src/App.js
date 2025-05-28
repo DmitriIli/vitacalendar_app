@@ -17,7 +17,11 @@ function App() {
   return (
     <div className="App">
       <Calendar />
-      <button onClick={onClose}>Close</button>
+      <button onClick={onClose}>
+        <h1>
+          Close
+        </h1>
+      </button>
     </div>
   );
 }
