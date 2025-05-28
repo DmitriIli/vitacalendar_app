@@ -2,10 +2,9 @@ import { useEffect } from 'react';
 import './App.css';
 import Calendar from './components/Calendar';
 
-
-
-   tg = window.Telegram.WebApp;
-
+  
+  const tg = window.Telegram.WebApp;
+  
   function App() {
 
     useEffect(() => {
