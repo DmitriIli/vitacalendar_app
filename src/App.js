@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 import Calendar from './components/Calendar';
 
-tg = window.Telegram.webApp;
+tg = window.Telegram.WebApp;
 
 function App() {
 
