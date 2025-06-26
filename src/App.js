@@ -9,8 +9,8 @@ import Calendar from './components/Calendar';
 
     useEffect(() => {
       tg.ready();
-      console.log('console')
-      console.log(`${tg.initDataUnsafe.user.id}`)
+      console.log('console');
+      console.log(`${tg.initDataUnsafe.user}`);
      }, [])
 
     const onClose = () => {
