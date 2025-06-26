@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Calendar from './components/Calendar';
 
@@ -9,15 +9,26 @@ import Calendar from './components/Calendar';
 
     useEffect(() => {
       tg.ready();
+      console.log(tg.initData)
      }, [])
 
     const onClose = () => {
       tg.close();
     }
 
+    const [date, setDate] = useState(new Date());
+
+    const getSelectedDate = (date) => {
+        console.log(date)
+    }
+
+    useEffect(() => {
+      getSelectedDate(date);
+  }, [date]);
+
     return (
       <div className="App">
-        <Calendar />
+        <Calendar setDate = {setDate} />
         <button onClick={onClose}>
           <h1>
             Close

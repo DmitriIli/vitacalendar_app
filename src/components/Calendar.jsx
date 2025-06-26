@@ -3,10 +3,12 @@ import '../styles/Calendar.css';
 
 
 
-const Calendar = ({ onDateSelect }) => {
+const Calendar = ({ onDateSelect, setDate }) => {
 
     const [currentDate, setCurrentDate] = useState(new Date());
+    const [currentMonth, setCurrentMonth] = useState();
     const [selectedDate, setSelectedDate] = useState(null);
+    const [notEmptyDays, setNotEmptyDays] = useState([]);
 
     const months = [
         'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
@@ -32,6 +34,7 @@ const Calendar = ({ onDateSelect }) => {
     const handleDateClick = (day) => {
         const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
         setSelectedDate(newDate);
+        setDate(newDate);
         if (onDateSelect) {
             onDateSelect(newDate);
         }
